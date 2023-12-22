@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br" class="">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Profile Card</title>
 </head>
-
 <body>
-  
-  <script src="script.js"></script></script>
+    <div class="profile-card">
+        <img src="./assets/avatar.png" alt="Foto de Perfil">
+      <div id="switch" onclick="toggleMode()"> 
+      <button></button>
+        <span></span>
+      </div>
+      <br>
+      <div id="switch" onclick="toggleMode()"></div>
+        <h1>Gustavo Leal</h1>
+        <p>Desenvolvedor Web</p>
+        <div class="project-exemple">
+          <a href="https://portifolio-gustavo-leal-1.bigbig5.repl.co" target="__block">Portifolio</a>
+          <a href="https://minha-agenda.bigbig5.repl.co" target="__block">Agenda Digital</a>
+          <a href="https://aprendendo-react.bigbig5.repl.co" target="__block">Lista de Presenca</a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/gustavo_leal009p/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://lealgustavo0099@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/BigOnwer" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+  <script src="script.js"></script>
 </body>
-
 </html>

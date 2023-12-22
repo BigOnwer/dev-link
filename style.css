@@ -1,4 +1,126 @@
-html {
-  height: 100%;
-  width: 100%;
+:root {
+  --text-color: white;
+  --bg-url: #525252;
+  --bgProfile-url: #363636;
+  --stroke-color: rgba(255, 255, 255, 1);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --switch-bg-url: url(./assets/MoonStars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: #f9f9f9;
+  --bgProfile-url: #e6e6e6;
+  --stroke-color: rgba(0, 0, 0, 1);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body    {
+    background: var(--bg-url) no-repeat top center/cover
+}
+
+body * {
+    font-family: 'Inter Tight', sans-serif;
+    color: var(--text-color); 
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-card {
+    background-color: var(--bgProfile-url);;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10%;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-card h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.profile-card p {
+    font-size: 16px;
+    color: 
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+.project-exemple{
+  display: flex;
+  flex-direction: column;
+}
+
+.project-exemple a{
+  text-decoration: none;
+  color: #fff;
+  background-color: #2196f3;
+  padding: 10px 50px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.project-exemple a:hover{
+  background-color: #0d47a1;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+
+.light #switch button {
+  right: 0;
+  left: 40px;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
